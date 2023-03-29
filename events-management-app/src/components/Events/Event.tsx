@@ -2,11 +2,12 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Card, CardContent, ToggleButton, Typography } from "@mui/material";
 import { FC, useContext, useState } from "react";
 import { EventsContext } from "../EventsContext";
+import { TParticipant } from "../EventsContext/types";
 import type { TEventProps } from "./types";
 
 export const Event: FC<TEventProps> = ({ event }) => {
   const { fetchedParticipants } = useContext(EventsContext);
-  const [participants, setParticipants] = useState<any[]>([]);
+  const [participants, setParticipants] = useState<TParticipant[]>([]);
   const [isViewActive, setIsViewActive] = useState(false);
 
   const handleViewParticipants = () => {

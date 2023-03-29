@@ -6,8 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
 
 export const Header = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { authDispatch, isAuthenticated } = useContext(AuthContext);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const navigate = useNavigate();
 
