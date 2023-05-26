@@ -66,7 +66,7 @@ export const Login = () => {
         <TextField
           required
           label="Email"
-          type="email"
+          InputProps={{ type: "email" }}
           onChange={(event) => handleInputChange(event, "email")}
         />
         <TextField
