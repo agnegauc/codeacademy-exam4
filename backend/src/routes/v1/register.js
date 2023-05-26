@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
     await con
       .db(DB)
       .collection(USERSCOLLECTION)
-      .insertOne({ email: userData.email, password: hashedPassword }); // Postinam ne tai, ką įrašytume į body Postman'e, o tai, kas šioje eilutėje
+      .insertOne({ email: userData.email, password: hashedPassword });
 
     await con.close();
 
